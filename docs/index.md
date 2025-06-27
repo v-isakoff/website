@@ -11,7 +11,8 @@ This page collects basic setup details and the development roadmap for the websi
 2. **Create a virtual environment and install dependencies**
    ```bash
    python3 -m venv .venv
-   source .venv/bin/activate
+   source .venv/bin/activate  # Linux/macOS
+   .\.venv\Scripts\activate  # Windows (cmd/PowerShell)
    pip install -r requirements.txt
    ```
 3. **Configure environment variables**
