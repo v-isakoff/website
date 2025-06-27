@@ -73,15 +73,14 @@ This repository contains the early foundation for a cross-platform website bundl
 
 You can preview the static pages using a small FastAPI application.
 
-1. **Install additional dependencies**
-   ```bash
-   pip install fastapi uvicorn
-   ```
-2. **Run the server**
-   ```bash
-   python -m src.serve_web
-   ```
-   Then open `http://127.0.0.1:8000` in your browser.
+After installing the packages from `requirements.txt` (which already include
+`fastapi` and `uvicorn`), run:
+
+```bash
+python -m src.serve_web
+```
+
+Then open `http://127.0.0.1:8000` in your browser.
 
 ## License
 This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE) for details.
