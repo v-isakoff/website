@@ -1,10 +1,17 @@
 """Minimal Telegram bot using aiogram 3.x"""
 import asyncio
 import os
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional dependency
+    def load_dotenv(*args, **kwargs):
+        return False
 
 from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+
+load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:

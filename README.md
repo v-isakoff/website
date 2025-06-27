@@ -51,21 +51,11 @@ This repository contains the early foundation for a cross-platform website bundl
    pip install -r requirements.txt
    ```
 3. **Set the bot token**
-   Export your token as an environment variable:
+   Copy `.env.example` to `.env` and edit the file to include your token:
 
-   **Unix/macOS**
    ```bash
-   export BOT_TOKEN=<your-token-here>
-   ```
-
-   **Windows (Command Prompt)**
-   ```cmd
-   set BOT_TOKEN=<your-token>
-   ```
-
-   **Windows (PowerShell)**
-   ```powershell
-   $env:BOT_TOKEN="<your-token>"
+   cp .env.example .env
+   # then open .env and set BOT_TOKEN=<your-token>
    ```
 4. **Run the bot**
    ```bash
