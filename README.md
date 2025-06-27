@@ -48,6 +48,8 @@ This repository contains the early foundation for a cross-platform website bundl
    python3 -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
+   # Optional: install development tools
+   pip install -r requirements-dev.txt
    ```
 3. **Set the bot token**
    Export your token as an environment variable:
@@ -64,8 +66,9 @@ This repository contains the early foundation for a cross-platform website bundl
 .
 ├── src/        # Application source code (Telegram bot and future backend)
 ├── docs/       # Project documentation
-├── README.md   # This file
-└── requirements.txt
+├── README.md            # This file
+├── requirements.txt     # Core dependencies
+└── requirements-dev.txt # Development dependencies
 ```
 
 ## License
