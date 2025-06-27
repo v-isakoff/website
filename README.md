@@ -52,13 +52,13 @@ This repository contains the early foundation for a cross-platform website bundl
    pip install -r requirements.txt
    ```
 3. **Set the bot token**
-   Create a `.env` file in the project root containing your token:
+   Copy `.env.example` to `.env` and edit the file to include your token:
 
-   ```env
-   BOT_TOKEN=<your-token-here>
+   ```bash
+   cp .env.example .env
+   # then open .env and set BOT_TOKEN=<your-token>
    ```
 
-   Alternatively, you can export `BOT_TOKEN` as an environment variable.
 4. **Run the bot**
    ```bash
    python -m src.bot

@@ -16,21 +16,11 @@ This page collects basic setup details and the development roadmap for the websi
    pip install -r requirements.txt
    ```
 3. **Configure environment variables**
-   Set the Telegram bot token so the application can authenticate:
+   Copy `.env.example` to `.env` and edit the file to include your Telegram bot token:
 
-   **Unix/macOS**
    ```bash
-   export BOT_TOKEN=<your-token>
-   ```
-
-   **Windows (Command Prompt)**
-   ```cmd
-   set BOT_TOKEN=<your-token>
-   ```
-
-   **Windows (PowerShell)**
-   ```powershell
-   $env:BOT_TOKEN="<your-token>"
+   cp .env.example .env
+   # open .env and set BOT_TOKEN=<your-token>
    ```
 4. **Run the bot**
    ```bash
@@ -46,7 +36,7 @@ This page collects basic setup details and the development roadmap for the websi
 - **Web Backend**: APIs built with FastAPI.
 
 ## Environment Variables
-- `BOT_TOKEN` – Telegram token obtained from [@BotFather](https://t.me/BotFather). Required to run the bot.
+- `BOT_TOKEN` – Telegram token obtained from [@BotFather](https://t.me/BotFather). Required to run the bot. Define this in a `.env` file based on `.env.example`.
 
 ## Directory Structure
 ```text

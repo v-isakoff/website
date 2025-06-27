@@ -2,6 +2,11 @@
 import asyncio
 import logging
 import os
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional dependency
+    def load_dotenv(*args, **kwargs):
+        return False
 
 from aiogram import Bot, Dispatcher
 from aiogram.exceptions import TelegramAPIError
@@ -14,6 +19,8 @@ except ModuleNotFoundError:  # pragma: no cover - fallback for environments with
         return None
 
 logging.basicConfig(level=logging.INFO)
+load_dotenv()
+
 load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
