@@ -1,6 +1,37 @@
-# Telegram Bot Skeleton
+# Multipurpose Website and Bot
 
-This repository provides a minimal structure for a Telegram bot project built with [aiogram](https://github.com/aiogram/aiogram).
+This repository contains the early foundation for a cross-platform website bundled with a Telegram bot. The goal is to provide handy utilities such as calculators and a lightweight note system. The site will adapt its styling for different operating systems to feel native whether viewed on Windows, macOS, Linux, or mobile devices.
+
+## Purpose
+- Offer quick-access calculators for everyday use.
+- Allow users to create and manage personal notes.
+- Provide a consistent look and feel across platforms with OS-aware themes.
+- Expose certain features through an accompanying Telegram bot.
+
+## Expected Features
+- **Calculators**: basic arithmetic, date calculations, and other small tools.
+- **Notes**: simple note-taking with the ability to sync via the backend.
+- **OS-Specific Styling**: themes optimized for desktop and mobile operating systems.
+- **Telegram Integration**: chat-based access to calculators and notes through the bot.
+
+## Target Platforms
+- Desktop browsers (Windows, macOS, Linux)
+- Mobile browsers (Android, iOS)
+- Telegram clients
+
+## Project Roadmap
+1. Establish project structure and continuous integration.
+2. Implement core calculator components.
+3. Introduce note management backend and UI.
+4. Apply OS-specific themes and responsive layout.
+5. Integrate Telegram bot with website features.
+6. Prepare deployment workflow and documentation.
+
+## High-Level Architecture
+- **Frontend**: Static pages enhanced with JavaScript for interactivity. Styling layers apply platform-specific themes.
+- **Backend**: Python service (planned with FastAPI) providing APIs for calculators and notes. The same service hosts the aiogram-based Telegram bot.
+- **Data Storage**: Lightweight database (such as SQLite) for notes and user data.
+- **Deployment**: Containerized application ready for hosting on common cloud providers.
 
 ## Requirements
 - Python 3.9+
@@ -31,7 +62,7 @@ This repository provides a minimal structure for a Telegram bot project built wi
 ## Project Structure
 ```
 .
-├── src/        # Application source code
+├── src/        # Application source code (Telegram bot and future backend)
 ├── docs/       # Project documentation
 ├── README.md   # This file
 └── requirements.txt
