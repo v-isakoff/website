@@ -63,10 +63,25 @@ This repository contains the early foundation for a cross-platform website bundl
 ```
 .
 ├── src/        # Application source code (Telegram bot and future backend)
+├── web/        # Static HTML and CSS
 ├── docs/       # Project documentation
 ├── README.md   # This file
 └── requirements.txt
 ```
+
+## Serving the Web Interface Locally
+
+You can preview the static pages using a small FastAPI application.
+
+1. **Install additional dependencies**
+   ```bash
+   pip install fastapi uvicorn
+   ```
+2. **Run the server**
+   ```bash
+   python -m src.serve_web
+   ```
+   Then open `http://127.0.0.1:8000` in your browser.
 
 ## License
 This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE) for details.
