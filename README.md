@@ -51,8 +51,20 @@ This repository contains the early foundation for a cross-platform website bundl
    ```
 3. **Set the bot token**
    Export your token as an environment variable:
+
+   **Unix/macOS**
    ```bash
    export BOT_TOKEN=<your-token-here>
+   ```
+
+   **Windows (Command Prompt)**
+   ```cmd
+   set BOT_TOKEN=<your-token>
+   ```
+
+   **Windows (PowerShell)**
+   ```powershell
+   $env:BOT_TOKEN="<your-token>"
    ```
 4. **Run the bot**
    ```bash
