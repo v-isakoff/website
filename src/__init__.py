@@ -3,7 +3,7 @@
 from .bot import dp, main
 
 try:
-    from .web import app
+    from .serve_web import app
 except Exception:  # pragma: no cover - web is optional
     app = None
 
