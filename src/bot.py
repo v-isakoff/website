@@ -1,10 +1,20 @@
 """Minimal Telegram bot using aiogram 3.x"""
 import asyncio
+import logging
 import os
 
 from aiogram import Bot, Dispatcher
+from aiogram.exceptions import TelegramAPIError
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:  # pragma: no cover - fallback for environments without python-dotenv
+    def load_dotenv() -> None:
+        return None
+
+logging.basicConfig(level=logging.INFO)
+load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
@@ -21,7 +31,10 @@ async def start(message: Message) -> None:
 async def main() -> None:
     """Run the bot."""
     bot = Bot(TOKEN)
-    await dp.start_polling(bot)
+    try:
+        await dp.start_polling(bot)
+    except TelegramAPIError as e:
+        logging.exception("Telegram API error: %s", e)
 
 if __name__ == "__main__":
     asyncio.run(main())
