@@ -32,6 +32,11 @@ def mock_aiogram():
     aiogram.types = types_mod
     sys.modules["aiogram.types"] = types_mod
 
+    exceptions_mod = types.ModuleType("aiogram.exceptions")
+    exceptions_mod.TelegramAPIError = type("TelegramAPIError", (Exception,), {})
+    aiogram.exceptions = exceptions_mod
+    sys.modules["aiogram.exceptions"] = exceptions_mod
+
 
 def mock_fastapi_uvicorn():
     class FastAPI:

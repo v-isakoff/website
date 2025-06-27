@@ -36,6 +36,7 @@ This repository contains the early foundation for a cross-platform website bundl
 ## Requirements
 - Python 3.9+
 - A Telegram bot token obtained from [@BotFather](https://t.me/BotFather)
+- A `.env` file in the project root with `BOT_TOKEN` defined
 
 ## Setup
 1. **Clone the repository**
@@ -51,22 +52,13 @@ This repository contains the early foundation for a cross-platform website bundl
    pip install -r requirements.txt
    ```
 3. **Set the bot token**
-   Export your token as an environment variable:
+   Copy `.env.example` to `.env` and edit the file to include your token:
 
-   **Unix/macOS**
    ```bash
-   export BOT_TOKEN=<your-token-here>
+   cp .env.example .env
+   # then open .env and set BOT_TOKEN=<your-token>
    ```
 
-   **Windows (Command Prompt)**
-   ```cmd
-   set BOT_TOKEN=<your-token>
-   ```
-
-   **Windows (PowerShell)**
-   ```powershell
-   $env:BOT_TOKEN="<your-token>"
-   ```
 4. **Run the bot**
    ```bash
    python -m src.bot
