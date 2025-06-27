@@ -36,12 +36,18 @@ async def start(message: Message) -> None:
     await message.answer("Hello, I'm alive!")
 
 async def main() -> None:
-    """Run the bot."""
-    bot = Bot(TOKEN)
+
+    """Run the bot with basic error handling."""
+    try:
+        bot = Bot(TOKEN)
+    except Exception as exc:  # pragma: no cover - defensive
+        raise RuntimeError("Failed to initialize Bot") from exc
+
     try:
         await dp.start_polling(bot)
-    except TelegramAPIError as e:
-        logging.exception("Telegram API error: %s", e)
+    except Exception as exc:
+        raise RuntimeError("Polling stopped unexpectedly") from exc
+
 
 if __name__ == "__main__":
     asyncio.run(main())
