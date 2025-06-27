@@ -70,6 +70,7 @@ This repository contains the early foundation for a cross-platform website bundl
    ```bash
    python -m src.bot
    ```
+   Run this command from the directory that contains the `src/` and `web/` folders (the repository root).
 
 ## Project Structure
 ```
@@ -93,7 +94,7 @@ You can preview the static pages using a small FastAPI application.
    ```bash
    python -m src.serve_web
    ```
-   Then open `http://127.0.0.1:8000` in your browser.
+   Run this command from the same directory that contains the `src/` and `web/` folders. Then open `http://127.0.0.1:8000` in your browser.
 
 ## License
 This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE) for details.
