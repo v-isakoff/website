@@ -16,8 +16,20 @@ This page collects basic setup details and the development roadmap for the websi
    ```
 3. **Configure environment variables**
    Set the Telegram bot token so the application can authenticate:
+
+   **Unix/macOS**
    ```bash
    export BOT_TOKEN=<your-token>
+   ```
+
+   **Windows (Command Prompt)**
+   ```cmd
+   set BOT_TOKEN=<your-token>
+   ```
+
+   **Windows (PowerShell)**
+   ```powershell
+   $env:BOT_TOKEN="<your-token>"
    ```
 4. **Run the bot**
    ```bash
