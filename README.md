@@ -46,7 +46,8 @@ This repository contains the early foundation for a cross-platform website bundl
 2. **Create a virtual environment and install dependencies**
    ```bash
    python3 -m venv .venv
-   source .venv/bin/activate
+   source .venv/bin/activate  # Linux/macOS
+   .\.venv\Scripts\activate  # Windows (cmd/PowerShell)
    pip install -r requirements.txt
    ```
 3. **Set the bot token**
