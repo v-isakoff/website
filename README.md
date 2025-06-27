@@ -63,6 +63,7 @@ This repository contains the early foundation for a cross-platform website bundl
 ```
 .
 ├── src/        # Application source code (Telegram bot and future backend)
+│   └── handlers/ # Message handlers
 ├── docs/       # Project documentation
 ├── README.md   # This file
 └── requirements.txt
